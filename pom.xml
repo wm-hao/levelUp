@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>springtest</groupId>
+    <artifactId>springtest</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <dependencies>
+        <!--测试相关-->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.11</version>
+            <scope>test</scope>
+        </dependency>
+        <!--Spring核心基础依赖-->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-core</artifactId>
+            <version>5.0.2.RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+            <version>5.0.2.RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-beans</artifactId>
+            <version>5.0.2.RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-expression</artifactId>
+            <version>5.0.2.RELEASE</version>
+        </dependency>
+        <!--日志相关-->
+        <dependency>
+            <groupId>commons-logging</groupId>
+            <artifactId>commons-logging</artifactId>
+            <version>1.2</version>
+        </dependency>
+        <dependency>
+            <groupId>log4j</groupId>
+            <artifactId>log4j</artifactId>
+            <version>1.2.17</version>
+        </dependency>
+        <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>6.11</version>
+            <scope>compile</scope>
+        </dependency>
+
+    </dependencies>
+    <!--
+        <properties>
+            <spring-version>4.3.7.RELEASE</spring-version>
+        </properties>
+
+        <dependencies>
+            &lt;!&ndash; Spring核心模块 &ndash;&gt;
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-beans</artifactId>
+                <version>${spring-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-context</artifactId>
+                <version>${spring-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-context-support</artifactId>
+                <version>${spring-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-core</artifactId>
+                <version>${spring-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-expression</artifactId>
+                <version>${spring-version}</version>
+            </dependency>
+
+            &lt;!&ndash; 可选模块，按需添加 &ndash;&gt;
+            &lt;!&ndash; AOP &ndash;&gt;
+            &lt;!&ndash; 基于代理的AOP支持 &ndash;&gt;
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-aop</artifactId>
+                <version>${spring-version}</version>
+            </dependency>
+            &lt;!&ndash; 提供与AspectJ的集成 &ndash;&gt;
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-aspects</artifactId>
+                <version>${spring-version}</version>
+            </dependency>
+
+            &lt;!&ndash; 提供一些类级工具支持和类加载器实现，在以在某些应用服务器中使用 &ndash;&gt;
+            &lt;!&ndash; 用于JVM引导的检测代理 &ndash;&gt;
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-instrument</artifactId>
+                <version>${spring-version}</version>
+            </dependency>
+            &lt;!&ndash; tomcat的instrument实现 &ndash;&gt;
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-instrument-tomcat</artifactId>
+                <version>${spring-version}</version>
+            </dependency>
+
+            &lt;!&ndash; JDBC支持包，包括数据源设置和JDBC访问支持 &ndash;&gt;
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-jdbc</artifactId>
+                <version>${spring-version}</version>
+            </dependency>
+
+            &lt;!&ndash; JMS支持包，包括用于发送/接收JMS消息的帮助程序类 &ndash;&gt;
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-jms</artifactId>
+                <version>${spring-version}</version>
+            </dependency>
+
+            &lt;!&ndash; 支持消息体系结构和协议 &ndash;&gt;
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-messaging</artifactId>
+                <version>${spring-version}</version>
+            </dependency>
+
+            &lt;!&ndash; 集成ORM框架如Hibernate、JPA等 &ndash;&gt;
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-orm</artifactId>
+                <version>${spring-version}</version>
+            </dependency>
+
+            &lt;!&ndash; Object/XML映射 &ndash;&gt;
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-oxm</artifactId>
+                <version>${spring-version}</version>
+            </dependency>
+
+            &lt;!&ndash; 支持单元测试和集成测试Spring组件&ndash;&gt;
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-test</artifactId>
+                <version>${spring-version}</version>
+            </dependency>
+
+            &lt;!&ndash; Spring事务 &ndash;&gt;
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-tx</artifactId>
+                <version>${spring-version}</version>
+            </dependency>
+
+            &lt;!&ndash; 提供基本的面向Web的集成功能 &ndash;&gt;
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-web</artifactId>
+                <version>${spring-version}</version>
+            </dependency>
+
+            &lt;!&ndash; SpringMVC &ndash;&gt;
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-webmvc</artifactId>
+                <version>${spring-version}</version>
+            </dependency>
+
+            &lt;!&ndash; Portlet环境中使用的MVC实现 &ndash;&gt;
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-webmvc-portlet</artifactId>
+                <version>${spring-version}</version>
+            </dependency>
+
+            &lt;!&ndash; WebSocket和SockJS基础架构，包括STOMP消息传递支持 &ndash;&gt;
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-websocket</artifactId>
+                <version>${spring-version}</version>
+            </dependency>
+
+        </dependencies>-->
+
+</project>
